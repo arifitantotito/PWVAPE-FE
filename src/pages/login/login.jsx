@@ -6,7 +6,7 @@ export default function Login(props){
     const password = useRef()
 
     return(
-        <div>
+        <div className="flex flex-col items-center justify-center h-screen">
             <div className="py-5 text-5xl">
                 Welcome to <span className="pwvape-color font-bold">PWVAPE</span>
             </div>

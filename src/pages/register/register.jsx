@@ -25,7 +25,7 @@ export default function Register(){
             let character = /^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/
             if(!character.test(inputPassword)) return { message: 'Password must contains number' }
             
-            await axios.post('http://localhost:5005/user/register', {username: inputUsername, email: inputEmail, password: inputPassword, key: inputKey})
+            await axios.post('http://localhost:5010/user/register', {username: inputUsername, email: inputEmail, password: inputPassword, key: inputKey})
             
         } catch (error) {
             console.log(error.response.data.message);
@@ -34,7 +34,7 @@ export default function Register(){
     }
     return(
         <div>
-            <div className="flex justify-center">
+            <div className="flex justify-center items-center h-screen">
                 <div className="w-96 p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
                     <div className="space-y-6" action="#">
                         <h5 className="text-xl font-bold text-gray-900 dark:text-white">Register Form</h5>
